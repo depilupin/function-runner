@@ -1,0 +1,10 @@
+name:  vulnerable build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call:
+    uses: ./.github/workflows/build.yml
+    with:
+      tag_name: "legit; echo HACKED > /tmp/pwned.txt #"
